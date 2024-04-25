@@ -19,20 +19,17 @@ interface LoginProps {
 export const LogIn: FC<LoginProps> = (props) => {
   return (
     <Card className="flex gap-2 flex-col min-w-[300px]">
-      <CardHeader className="gap-2">
-        <CardTitle className="text-2xl flex gap-2">
-          <Avatar className="h-8 w-8">
-            <AvatarImage src={"ai-icon.png"} />
-          </Avatar>
-          <span className="text-primary">{AI_NAME}</span>
+      <CardHeader className="gap-2 pb-0">
+      <img className="flex justify-center w-64" src="REDW_logo.png"></img>
+        <CardTitle className="flex justify-center text-4xl gap-2 m-4">
+          <span className="text-primary m-4">{AI_NAME}</span>
         </CardTitle>
         <CardDescription>
-          Login in with your GitHub or Microsoft 365 account
+          Login in with your REDW account
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <Button onClick={() => signIn("github")}>GitHub</Button>
-        <Button onClick={() => signIn("azure-ad")}> Microsoft 365</Button>
+        <Button onClick={() => signIn("azure-ad")}>Login</Button>
         {props.isDevMode ? (
           <Button onClick={() => signIn("localdev")}>
             Basic Auth (DEV ONLY)
