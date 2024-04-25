@@ -24,6 +24,8 @@ const azureEnvVars = [
   "AZURE_SPEECH_REGION",
   "AZURE_SPEECH_KEY",
   "AZURE_KEY_VAULT_NAME",
+  "AZURE_OPENAI_API_CHAT_KEY",
+  "AZURE_OPEN_API_CHAT_INSTANCE_NAME",
 ] as const;
 
 type RequiredServerEnvKeys = (typeof azureEnvVars)[number];

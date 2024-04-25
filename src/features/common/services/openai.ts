@@ -2,10 +2,10 @@ import { OpenAI } from "openai";
 
 export const OpenAIInstance = () => {
   const openai = new OpenAI({
-    apiKey: process.env.AZURE_OPENAI_API_KEY,
-    baseURL: `https://${process.env.AZURE_OPENAI_API_INSTANCE_NAME}.openai.azure.com/openai/deployments/${process.env.AZURE_OPENAI_API_DEPLOYMENT_NAME}`,
+    apiKey: process.env.AZURE_OPENAI_API_CHAT_KEY,
+    baseURL: `https://${process.env.AZURE_OPEN_API_CHAT_INSTANCE_NAME}.openai.azure.com/openai/deployments/${process.env.AZURE_OPENAI_API_DEPLOYMENT_NAME}`,
     defaultQuery: { "api-version": process.env.AZURE_OPENAI_API_VERSION },
-    defaultHeaders: { "api-key": process.env.AZURE_OPENAI_API_KEY },
+    defaultHeaders: { "api-key": process.env.AZURE_OPENAI_API_CHAT_KEY },
   });
   return openai;
 };
