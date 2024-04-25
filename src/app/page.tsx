@@ -4,7 +4,7 @@ import { LogIn } from "@/features/auth-page/login";
 export default async function Home() {
   await redirectIfAuthenticated();
   return (
-    <main className="container md:w-auto max-w-lg flex items-center">
+    <main className="max-w-lg flex items-center">
       <LogIn isDevMode={process.env.NODE_ENV === "development"} />
     </main>
   );
